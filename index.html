@@ -3,62 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aleimola</title>
-    <style>
-        body {
-            font-family: system-ui, -apple-system, sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            margin: 0;
-            background-color: #f5f5f7;
-            color: #1d1d1f;
-        }
-        h1 {
-            font-weight: 600;
-            margin-bottom: 3rem;
-        }
-        .container {
-            display: flex;
-            gap: 2rem;
-            flex-wrap: wrap;
-            justify-content: center;
-            padding: 1rem;
-        }
-        .card {
-            background: white;
-            padding: 2.5rem;
-            border-radius: 18px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-            text-decoration: none;
-            color: inherit;
-            transition: all 0.3s ease;
-            text-align: center;
-            min-width: 200px;
-            border: 1px solid rgba(0,0,0,0.05);
-        }
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
-        }
-        .card h2 {
-            margin: 0;
-            font-size: 1.5rem;
-            color: #007aff;
-        }
-    </style>
+    <title>Alessia Imoletti | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Fira Code for that 'coding' vibe -->
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
-    <h1>Select a category</h1>
-    <div class="container">
-        <a href="web%20page%20famiglie.html" class="card">
-            <h2>Families</h2>
-        </a>
-        <a href="web%20page%20privati%20(1).html" class="card">
-            <h2>Private</h2>
-        </a>
-    </div>
+
+    <nav class="navbar">
+        <div class="logo">A.I.</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="projects.html">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="hero">
+            <span class="subtitle fade-in">Hi, my name is</span>
+            <h1 class="fade-in" style="transition-delay: 100ms;">Alessia Imoletti.</h1>
+            <h2 class="fade-in" style="transition-delay: 200ms;">MSc Student Management Engineering.</h2>
+            
+            <p class="fade-in" style="transition-delay: 300ms;">
+                I am a Management Engineering student at <span class="text-highlight">Sapienza University of Rome</span>.
+                I combine analytical rigor with creative problem-solving to build data-driven solutions and optimize complex systems.
+                Welcome to my digital garden.
+            </p>
+            
+            <div class="fade-in" style="transition-delay: 400ms;">
+                <a href="projects.html" class="btn">Check out my projects!</a>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
 </body>
 </html>

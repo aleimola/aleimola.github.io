@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Alessia Imoletti</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">A.I.</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="projects.html" class="text-highlight">Projects</a>
+            <a href="index.html#contact">Contact</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section>
+            <h2 class="fade-in">Selected Work</h2>
+            <div class="projects-grid fade-in" style="transition-delay: 200ms;">
+
+                <!-- Project Card 1: Data Driven Marketing -->
+                <a href="data_driven_marketing.html" class="project-card">
+                    <div class="project-top">
+                        <i data-lucide="bar-chart-2" class="folder-icon"></i>
+                        <i data-lucide="external-link" style="color: var(--text-secondary);"></i>
+                    </div>
+                    <h3>Data Driven Marketing</h3>
+                    <p>
+                        A comprehensive dashboard analysis for marketing optimization.
+                        Features customer segmentation, churn prediction, and ROI analysis using advanced analytics.
+                    </p>
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>Pandas</span>
+                        <span>Data Viz</span>
+                    </div>
+                </a>
+
+                <!-- Placeholder Project 2 -->
+                <div class="project-card">
+                    <div class="project-top">
+                        <i data-lucide="folder" class="folder-icon"></i>
+                        <i data-lucide="github" style="color: var(--text-secondary);"></i>
+                    </div>
+                    <h3>Supply Chain Optimization</h3>
+                    <p>
+                        Optimization model for supply chain management reducing costs by 15% through linear programming.
+                    </p>
+                    <div class="project-tech">
+                        <span>Excel Solver</span>
+                        <span>Linear Programming</span>
+                    </div>
+                </div>
+
+                <!-- Placeholder Project 3 -->
+                <div class="project-card">
+                    <div class="project-top">
+                        <i data-lucide="folder" class="folder-icon"></i>
+                        <i data-lucide="github" style="color: var(--text-secondary);"></i>
+                    </div>
+                    <h3>Portfolio Website</h3>
+                    <p>
+                        The website you are looking at right now. Built with pure HTML/CSS to maximize performance and
+                        SEO.
+                    </p>
+                    <div class="project-tech">
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>JS</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>
