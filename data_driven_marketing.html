@@ -84,6 +84,39 @@
                 margin-bottom: 30px;
             }
         }
+
+        /* Enhanced Marketing Button Style */
+        .btn {
+            background: #87CEFA;
+            /* Light Sky Blue */
+            color: var(--accent-blue);
+            /* Blue */
+            border: none;
+            border-radius: 4px;
+            /* Rectangular-ish */
+            padding: 12px 35px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 15px rgba(0, 123, 255, 0.2);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            z-index: 1;
+            margin-top: 15px;
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 8px 25px rgba(135, 206, 250, 0.5);
+            background: #b0e0ff;
+            color: var(--accent-blue);
+        }
+
+        .btn::after {
+            display: none;
+        }
     </style>
 </head>
 
@@ -95,12 +128,10 @@
 
         <div class="fade-in" style="position: relative;">
             <!-- Back link removed -->
-            <h1>Neovision</h1>
+            <h1><span style="color: #87CEFA;">Neo</span><span style="color: var(--accent-blue);">vision</span></h1>
             <p style="color: var(--text-secondary);">Experiential Cinema</p>
             <img src="logo_marketing.png" alt="Neovision Logo"
                 style="position: absolute; top: 0; right: 0; width: 100px; height: auto;">
-
-            <a href="ddm_graph.html" class="btn" style="margin-top: 20px;">View Interactive Graphs</a>
         </div>
 
         <div class="dashboard-layout fade-in" style="transition-delay: 200ms;">
@@ -109,7 +140,10 @@
                 <h4>Table of Contents</h4>
                 <a href="#overview" class="menu-item">Service</a>
                 <a href="#methodology" class="menu-item">Analysis RFM e K-Means</a>
-                <a href="#results" class="menu-item">Key Results</a>
+                <a href="#results" class="menu-item">Interviews and Focus Group</a>
+                <a href="#survey" class="menu-item">Survey</a>
+                <a href="#reviews" class="menu-item">Reviews/Comments/Suggestions</a>
+                <a href="#personas" class="menu-item">Buyer Personas</a>
                 <a href="#technologies" class="menu-item">Technologies Used</a>
             </aside>
 
@@ -126,16 +160,7 @@
 
                     <a href="Step1_drive.pdf" class="btn" target="_blank" style="margin-bottom: 30px;">Overview</a>
 
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-                        <div class="stat-card">
-                            <span>Total ROI Increase</span>
-                            <div class="stat-number">+24%</div>
-                        </div>
-                        <div class="stat-card">
-                            <span>Customer Retention</span>
-                            <div class="stat-number">92%</div>
-                        </div>
-                    </div>
+
                 </section>
 
                 <section id="methodology">
@@ -150,10 +175,11 @@
                     <p style="color: var(--text-secondary);">
                         The elbow method was used to determine the optimal number of clusters (k=4).
                     </p>
+                    <a href="ddm_graph.html" class="btn" style="margin-top: 10px;">View Interactive Graphs</a>
                 </section>
 
                 <section id="results">
-                    <h2>Key Results</h2>
+                    <h2>Interviews and Focus Group</h2>
                     <ul style="list-style: disc; padding-left: 20px; color: var(--text-secondary);">
                         <li style="margin-bottom: 10px;">Identified a "sleeping giant" segment of high-potential
                             customers.</li>
@@ -161,6 +187,30 @@
                             base for the same conversion volume.</li>
                         <li style="margin-bottom: 10px;">Automated the reporting pipeline using Python scripts.</li>
                     </ul>
+                    <a href="#" class="btn" style="margin-top: 10px;">[Button Name]</a>
+                </section>
+
+                <section id="survey">
+                    <h2>Survey</h2>
+                    <p style="color: var(--text-secondary);">
+                        [Content for Survey goes here]
+                    </p>
+                    <a href="#" class="btn" style="margin-top: 10px;">[Button Name]</a>
+                </section>
+
+                <section id="reviews">
+                    <h2>Reviews/Comments/Suggestions</h2>
+                    <p style="color: var(--text-secondary);">
+                        [Content for Reviews/Comments/Suggestions goes here]
+                    </p>
+                    <a href="#" class="btn" style="margin-top: 10px;">[Button Name]</a>
+                </section>
+
+                <section id="personas">
+                    <h2>Buyer Personas</h2>
+                    <p style="color: var(--text-secondary);">
+                        [Content for Buyer Personas goes here]
+                    </p>
                 </section>
 
             </div>
