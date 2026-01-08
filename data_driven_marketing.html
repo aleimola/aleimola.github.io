@@ -117,6 +117,104 @@
         .btn::after {
             display: none;
         }
+
+        /* Analysis Section Enhancements */
+        .analysis-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        .analysis-card {
+            background: rgba(17, 34, 64, 0.4);
+            border: 1px solid rgba(135, 206, 250, 0.2);
+            padding: 20px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .analysis-card:hover {
+            transform: translateY(-5px);
+            border-color: #87CEFA;
+            background: rgba(135, 206, 250, 0.05);
+        }
+
+        .analysis-card i {
+            color: #87CEFA;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .analysis-card h5 {
+            color: #e6f1ff;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .analysis-card p {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            line-height: 1.4;
+        }
+
+        /* Scrollable Container Styles */
+        .scrollable-analysis {
+            background: rgba(17, 34, 64, 0.4);
+            border: 1px solid rgba(135, 206, 250, 0.2);
+            border-radius: 8px;
+            padding: 25px;
+            max-height: 400px;
+            overflow-y: auto;
+            margin: 30px 0;
+            scrollbar-width: thin;
+            scrollbar-color: #87CEFA rgba(17, 34, 64, 0.4);
+        }
+
+        .scrollable-analysis::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .scrollable-analysis::-webkit-scrollbar-track {
+            background: rgba(17, 34, 64, 0.4);
+        }
+
+        .scrollable-analysis::-webkit-scrollbar-thumb {
+            background-color: #87CEFA;
+            border-radius: 20px;
+        }
+
+        .scrollable-analysis h3 {
+            color: #87CEFA;
+            margin-bottom: 15px;
+            font-size: 1.25rem;
+        }
+
+        .scrollable-analysis h4 {
+            color: #e6f1ff;
+            margin: 20px 0 10px 0;
+            font-size: 1.1rem;
+        }
+
+        .scrollable-analysis p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .scrollable-analysis ul {
+            margin-bottom: 15px;
+            padding-left: 20px;
+        }
+
+        .scrollable-analysis li {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 8px;
+        }
     </style>
 </head>
 
@@ -166,17 +264,121 @@
 
                 <section id="methodology">
                     <h2>Analysis RFM e K-Means</h2>
+
+
                     <p style="color: var(--text-secondary); margin-bottom: 20px;">
-                        We utilized K-Means clustering to group customers based on Recency, Frequency, and Monetary
-                        (RFM) values.
+                        This section presents a concise overview of the analytical framework adopted to examine customer
+                        behavior. The dashboard summarizes the main methodological steps and results of the RFM analysis
+                        and clustering procedure, highlighting the criteria used for data construction, scoring, and
+                        segmentation. The objective is to provide a clear and structured synthesis of the underlying
+                        analytical process, while detailed assumptions, formulas, and graphical outputs are documented
+                        separately.
                     </p>
-                    <div class="chart-placeholder">
-                        [Visualization: K-Means Clusters 3D Plot]
+
+                    <div class="scrollable-analysis">
+                        <h3>RFM Analysis & Clustering</h3>
+                        <p>The analysis is based on the application of the RFM model (Recency, Frequency, Monetary) over
+                            an 18-month time horizon (01/01/2024 – 30/06/2025), considered appropriate for capturing
+                            stable consumption behaviors, seasonal effects, and post-launch dynamics of the service. Two
+                            distinct populations were analyzed: private customers and family customers, treated
+                            separately in order to avoid distortions arising from heterogeneous consumption patterns.
+                        </p>
+
+                        <p>For both populations, the following three key dimensions were considered:</p>
+                        <ul>
+                            <li><strong>Recency (R):</strong> number of days elapsed since the last purchase;</li>
+                            <li><strong>Frequency (F):</strong> number of events attended;</li>
+                            <li><strong>Monetary (M):</strong> total expenditure.</li>
+                        </ul>
+                        <p>R, F, and M scores were assigned on a 1–5 scale, using the distribution quantiles, and
+                            subsequently aggregated into an overall RFM score.</p>
+
+                        <h4>Data Generation</h4>
+                        <p>The data used in the analysis consist of simulated data, constructed on the basis of
+                            assumptions consistent with the business model described in the project.</p>
+
+                        <p><strong>Frequency and Monetary</strong><br>In order to ensure a realistic relationship
+                            between consumption frequency and expenditure:</p>
+                        <ul>
+                            <li>a latent variable, Reference, was introduced and generated as a uniform random variable
+                                in the interval [0,1];</li>
+                            <li>Frequency and Monetary were computed as linear functions of predefined value ranges;
+                            </li>
+                            <li>a noise term (Storm) was added to prevent perfect correlation between the two variables.
+                            </li>
+                        </ul>
+
+                        <p><strong>Recency</strong><br>Last purchase dates were generated randomly within the
+                            observation time window. The Recency variable was calculated as the difference, expressed in
+                            days, between the snapshot date (30/06/2025) and the date of the last transaction.</p>
+
+                        <h4>K-means Clustering</h4>
+                        <p>A K-means clustering procedure was applied to the RFM_points obtained from the RFM analysis,
+                            with the objective of segmenting customers into homogeneous groups based on observed
+                            purchasing behaviors.</p>
+                        <p>The optimal number of clusters was determined using the Elbow Method, by analyzing the trend
+                            of the Total Within Sum of Squares (TWSS) as the number of clusters k increases. In both
+                            analyzed cases (private customers and families), the graph shows a marked reduction in TWSS
+                            up to k = 4, beyond which further improvements become marginal. Therefore, k = 4 was
+                            selected as the optimal number of clusters, as it provides a balance between the descriptive
+                            power of the model and the stability of the segmentation.</p>
+                        <p>The analysis of variable contributions to the clustering dimensions reveals a clear
+                            interpretative structure. In particular, Frequency (F_points) and Monetary (M_points)
+                            provide contributions significantly above the average to the first dimension, emerging as
+                            the dominant variables defining this axis. This result is consistent with the data
+                            generation process, which introduces a controlled correlation between consumption frequency
+                            and total expenditure.</p>
+                        <p>The second clustering dimension is instead predominantly explained by Recency (R_points),
+                            whose contribution is markedly higher than that of the other two variables. This evidence is
+                            attributable to the fact that Recency was constructed from the Last Purchase variable
+                            independently of Frequency and Monetary.</p>
+
+                        <p>The resulting segmentation therefore makes it possible to distinguish groups of customers
+                            characterized by different combinations of:</p>
+                        <ul>
+                            <li>economic value (Monetary),</li>
+                            <li>intensity of service usage (Frequency),</li>
+                            <li>recent activity level (Recency),</li>
+                        </ul>
+                        <p>thus providing a coherent quantitative basis for the analysis of behavioral profiles.</p>
+
+                        <h4>Output of the Analysis</h4>
+                        <p>The integration of RFM scoring and K-means clustering produces a segmentation of the customer
+                            base based exclusively on observable behavioral variables (Recency, Frequency, Monetary).
+                        </p>
+                        <p>The outcome of the analysis consists of:</p>
+                        <ul>
+                            <li>a partition of customers into disjoint clusters, obtained by minimizing intra-cluster
+                                variability and maximizing inter-cluster separation;</li>
+                            <li>the identification of statistically homogeneous groups in terms of relative levels of
+                                Recency, Frequency, and Monetary;</li>
+                            <li>a synthetic representation of consumption behavior distributions, useful for comparisons
+                                between populations (private customers vs families) and for subsequent analyses based on
+                                RFM scores.</li>
+                        </ul>
                     </div>
-                    <p style="color: var(--text-secondary);">
-                        The elbow method was used to determine the optimal number of clusters (k=4).
-                    </p>
-                    <a href="#" class="btn" style="margin-top: 10px;">Analysis</a>
+
+                    <div class="analysis-grid">
+                        <div class="analysis-card">
+                            <i data-lucide="clock"></i>
+                            <h5>Recency</h5>
+                            <p>Measures how recently a customer has engaged with Neovision experiential services.</p>
+                        </div>
+                        <div class="analysis-card">
+                            <i data-lucide="refresh-cw"></i>
+                            <h5>Frequency</h5>
+                            <p>Analyzes the regularity of visits and engagement over the observation period.</p>
+                        </div>
+                        <div class="analysis-card">
+                            <i data-lucide="banknote"></i>
+                            <h5>Monetary</h5>
+                            <p>Evaluates the total value contributed by each customer segment.</p>
+                        </div>
+                    </div>
+
+                    <a href="#" class="btn" style="margin-top: 10px;">simulation data - excel</a>
+                    <br>
+                    <a href="STEP_2(3).pdf" class="btn" target="_blank" style="margin-top: 10px;">Analysis</a>
                     <br>
                     <a href="ddm_graph.html" class="btn" style="margin-top: 10px;">View Interactive Graphs</a>
                 </section>
