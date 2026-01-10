@@ -270,6 +270,49 @@
             height: 100%;
             border: none;
         }
+
+        /* Survey CTA Card Styles */
+        .survey-cta-card {
+            background: linear-gradient(145deg, rgba(135, 206, 250, 0.1), rgba(10, 25, 47, 0.8));
+            border: 1px solid rgba(135, 206, 250, 0.2);
+            border-left: 4px solid #87CEFA;
+            border-radius: 12px;
+            padding: 30px;
+            margin: 25px 0;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .survey-cta-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(135, 206, 250, 0.1);
+            border-color: rgba(135, 206, 250, 0.4);
+        }
+
+        .survey-cta-card i {
+            color: #87CEFA;
+            width: 48px;
+            height: 48px;
+            margin-bottom: 5px;
+        }
+
+        .survey-cta-card h4 {
+            color: #e6f1ff;
+            margin: 0;
+            font-size: 1.25rem;
+            letter-spacing: 1px;
+        }
+
+        .survey-cta-card p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            max-width: 400px;
+            margin: 0 auto;
+        }
     </style>
 </head>
 
@@ -593,18 +636,29 @@
                         target="_blank">Magazine</a>
                     <br>
                     <a href="#" class="btn" style="margin-top: 10px;">Trascription</a>
-                    <a href="#" class="btn" style="margin-top: 10px; margin-left: 10px;">Recordings</a>
+                    <a href="#" class="btn" style="margin-top: 10px;">Recordings</a>
                 </section>
 
                 <section id="survey">
                     <h2>Survey</h2>
                     <p style="color: var(--text-secondary);">
-                        [Content for Survey goes here]
+                        The quantitative survey phase allowed us to map the potential market with precision, defining
+                        clear customer segments and their expectations regarding pricing and immersive experience. The
+                        data collected provides a statistically solid foundation for our strategic decisions.
                     </p>
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSetKaDthOCEAe_4uW0RdKSsiYMvJ9GANQoG5ZfYKzCLN0WkUw/viewform?usp=header"
-                        class="btn" style="margin-top: 10px;" target="_blank">Google Form</a>
+
+                    <!-- Survey Action Card -->
+                    <div class="survey-cta-card">
+                        <i data-lucide="clipboard-list"></i>
+                        <h4>JOIN THE RESEARCH</h4>
+                        <p>Help us refine the immersive cinema experience by participating in our quantitative survey.
+                        </p>
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSetKaDthOCEAe_4uW0RdKSsiYMvJ9GANQoG5ZfYKzCLN0WkUw/viewform?usp=header"
+                            class="btn" target="_blank" style="margin-top: 5px;">Open Google Form</a>
+                    </div>
+
                     <a href="NEOVISION - Q&A SERVIZIO DI CINEMA IMMERSIVO  (Risposte).xlsx" class="btn"
-                        style="margin-top: 10px; margin-left: 10px;" download>Statistic results</a>
+                        style="margin-top: 10px;" download>Statistic results</a>
                     <br>
                     <a href="ANALISI_SURVEY (1).pdf" class="btn" style="margin-top: 10px;" target="_blank">Analysis</a>
                 </section>
