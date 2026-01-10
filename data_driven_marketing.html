@@ -215,6 +215,44 @@
             line-height: 1.6;
             margin-bottom: 8px;
         }
+
+        /* Carousel Styles */
+        .carousel-container {
+            position: relative;
+            width: 100%;
+            max-width: 500px;
+            height: 300px;
+            margin: 20px auto;
+            overflow: hidden;
+            border-radius: 8px;
+            background: rgba(10, 25, 47, 0.5);
+            border: 1px solid rgba(135, 206, 250, 0.2);
+        }
+
+        .carousel-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            object-fit: contain;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(10, 25, 47, 0.3);
+        }
+
+        .carousel-slide img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        .carousel-slide.active {
+            opacity: 1;
+        }
     </style>
 </head>
 
@@ -250,15 +288,23 @@
 
                 <section id="overview" style="padding-top: 0;">
                     <h2>Our Company</h2>
-                    <div style="color: var(--text-secondary); margin-bottom: 30px;">
-                        <p style="margin-bottom: 15px;"><strong>CONTEXT:</strong> This project examines the introduction
-                            of Neovision, an innovative model of cinematic consumption developed in response to the
-                            progressive decline of traditional cinema, a phenomenon intensified by the COVID-19 pandemic
-                            and the rapid expansion of streaming platforms. Within this context, the project is grounded
-                            in the assumption that audiences have not lost interest in cinema itself, but rather
-                            increasingly demand immersive, personalized, and emotionally engaging experiences capable of
-                            motivating them to move beyond home-based viewing.</p>
 
+                    <div style="display: flex; gap: 30px; align-items: start; margin-bottom: 30px; flex-wrap: wrap;">
+                        <img src="immagine1.png" alt="Our Company Image"
+                            style="width: 300px; height: auto; border-radius: 8px; border: 1px solid rgba(135, 206, 250, 0.2);">
+                        <div style="flex: 1; min-width: 300px; color: var(--text-secondary);">
+                            <p style="margin-bottom: 0;"><strong>CONTEXT:</strong> This project examines the
+                                introduction of Neovision, an innovative model of cinematic consumption developed in
+                                response to the progressive decline of traditional cinema, a phenomenon intensified by
+                                the COVID-19 pandemic and the rapid expansion of streaming platforms. Within this
+                                context, the project is grounded in the assumption that audiences have not lost interest
+                                in cinema itself, but rather increasingly demand immersive, personalized, and
+                                emotionally engaging experiences capable of motivating them to move beyond home-based
+                                viewing.</p>
+                        </div>
+                    </div>
+
+                    <div style="color: var(--text-secondary); margin-bottom: 30px;">
                         <p style="margin-bottom: 15px;"><strong>WHO WE ARE:</strong> Neovision proposes an experiential
                             cinema service that integrates technological innovation with cultural heritage enhancement.
                             Film screenings take place in historic and artistic locations, specifically prepared for the
@@ -279,8 +325,12 @@
 
                     <!-- Mission and Vision side by side -->
                     <div class="analysis-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
-                        <div class="analysis-card">
-                            <h5>MISSION</h5>
+                        <div class="analysis-card"
+                            style="background: linear-gradient(145deg, rgba(17, 34, 64, 0.6), rgba(10, 25, 47, 0.8)); border-left: 4px solid #87CEFA;">
+                            <div style="display: flex; align-items: center; margin-bottom: 15px; gap: 10px;">
+                                <i data-lucide="target" style="color: #87CEFA; width: 24px; height: 24px;"></i>
+                                <h5 style="margin: 0; color: #87CEFA;">MISSION</h5>
+                            </div>
                             <p>Neovision’s mission is to deliver a new form of cinematic experience that combines
                                 technological innovation, cultural heritage, and sustainable entertainment. The
                                 objective is to move beyond the conventional cinema setting, transforming film viewing
@@ -288,8 +338,12 @@
                                 connection between the spectator, the cinematic narrative, and the surrounding
                                 historical and artistic environment.</p>
                         </div>
-                        <div class="analysis-card">
-                            <h5>VISION</h5>
+                        <div class="analysis-card"
+                            style="background: linear-gradient(145deg, rgba(17, 34, 64, 0.6), rgba(10, 25, 47, 0.8)); border-left: 4px solid #87CEFA;">
+                            <div style="display: flex; align-items: center; margin-bottom: 15px; gap: 10px;">
+                                <i data-lucide="eye" style="color: #87CEFA; width: 24px; height: 24px;"></i>
+                                <h5 style="margin: 0; color: #87CEFA;">VISION</h5>
+                            </div>
                             <p>Neovision’s vision is to become a benchmark for the cinema of the future, where
                                 technology, culture, and art converge to create multisensory and shared experiences. In
                                 this perspective, cinema is no longer conceived solely as audiovisual content, but as a
@@ -299,21 +353,77 @@
                     </div>
 
                     <!-- Brand Values - large rectangle -->
-                    <div class="analysis-card" style="margin-top: 20px;">
-                        <h5>BRAND VALUES</h5>
-                        <ul style="list-style: none; padding: 0; color: var(--text-secondary);">
-                            <li style="margin-bottom: 10px;"><strong>Innovation</strong>, understood as the conscious
-                                use of technology to enhance—rather than replace—the cinematic experience;</li>
-                            <li style="margin-bottom: 10px;"><strong>Cultural heritage enhancement</strong>, achieved
-                                through the sustainable use of historic locations as an integral part of the narrative;
-                            </li>
-                            <li style="margin-bottom: 10px;"><strong>Cultural sustainability</strong>, promoting an
-                                entertainment model that respects both places and local communities;</li>
-                            <li style="margin-bottom: 10px;"><strong>Spectator centrality</strong>, with the audience
-                                positioned as an active participant in an immersive and emotional journey;</li>
-                            <li style="margin-bottom: 10px;"><strong>Quality and emotion</strong>, as defining elements
-                                of an offering designed to create meaningful and memorable experiences.</li>
+                    <div class="analysis-card"
+                        style="margin-top: 20px; background: linear-gradient(145deg, rgba(17, 34, 64, 0.6), rgba(10, 25, 47, 0.8)); border-left: 4px solid #87CEFA;">
+                        <div style="display: flex; align-items: center; margin-bottom: 15px; gap: 10px;">
+                            <i data-lucide="shield-check" style="color: #87CEFA; width: 24px; height: 24px;"></i>
+                            <h5 style="margin: 0; color: #87CEFA;">BRAND VALUES</h5>
+                        </div>
+                        <ul
+                            style="list-style: none; padding: 0; color: var(--text-secondary); display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px;">
+                            <li><strong style="color: #e6f1ff;">Innovation</strong>: Conscious use of technology to
+                                enhance—rather than replace—the cinematic experience.</li>
+                            <li><strong style="color: #e6f1ff;">Cultural Heritage</strong>: Sustainable use of historic
+                                locations as an integral part of the narrative.</li>
+                            <li><strong style="color: #e6f1ff;">Sustainability</strong>: Promoting an entertainment
+                                model that respects both places and local communities.</li>
+                            <li><strong style="color: #e6f1ff;">Spectator Centrality</strong>: Audience as an active
+                                participant in an immersive and emotional journey.</li>
+                            <li><strong style="color: #e6f1ff;">Quality & Emotion</strong>: Defining elements designed
+                                to create meaningful and memorable experiences.</li>
                         </ul>
+                    </div>
+
+                    <!-- Market Positioning -->
+                    <div class="analysis-card"
+                        style="margin-top: 20px; background: linear-gradient(145deg, rgba(17, 34, 64, 0.6), rgba(10, 25, 47, 0.8)); border-left: 4px solid #87CEFA;">
+                        <div style="display: flex; align-items: center; margin-bottom: 15px; gap: 10px;">
+                            <i data-lucide="map-pin" style="color: #87CEFA; width: 24px; height: 24px;"></i>
+                            <h5 style="margin: 0; color: #87CEFA;">MARKET POSITIONING</h5>
+                        </div>
+                        <p style="margin-bottom: 15px; color: var(--text-secondary);">Neovision is strategically
+                            positioned
+                            as an experiential and immersive cinema service, located at the intersection of
+                            technological innovation, cultural heritage enhancement, and high emotional involvement.
+                            Unlike traditional cinemas and streaming platforms, Neovision does not compete primarily on
+                            price or volume, but on the quality and intensity of the experience offered.</p>
+                        <p style="margin-bottom: 10px; color: var(--text-secondary);">Across the positioning maps,
+                            Neovision consistently scores high in:</p>
+                        <ul style="list-style: none; padding: 0; color: var(--text-secondary); margin-bottom: 15px;">
+                            <li style="margin-bottom: 8px;"><strong style="color: #e6f1ff;">Innovation level</strong>,
+                                through the use of smart glasses and interactive audiovisual content;</li>
+                            <li style="margin-bottom: 8px;"><strong style="color: #e6f1ff;">Cultural heritage
+                                    valorization</strong>, by integrating historic locations into the cinematic
+                                narrative;</li>
+                            <li style="margin-bottom: 8px;"><strong style="color: #e6f1ff;">Emotional
+                                    involvement</strong>, generated by immersive settings, live performances, and
+                                curated events;</li>
+                            <li style="margin-bottom: 8px;"><strong style="color: #e6f1ff;">Customer care</strong>,
+                                reflecting the attention to comfort, service quality, and overall experience.</li>
+                        </ul>
+
+                        <!-- Carousel for Positioning Maps -->
+                        <div class="carousel-container" id="positioningCarousel">
+                            <div class="carousel-slide active">
+                                <img src="positioning map1.png" alt="Positioning Map 1">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="positioning map 2.png" alt="Positioning Map 2">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="positioning map 3.png" alt="Positioning Map 3">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="positioning map 4.png" alt="Positioning Map 4">
+                            </div>
+                        </div>
+
+                        <p style="color: var(--text-secondary);">These dimensions allow Neovision to clearly
+                            differentiate itself from both direct competitors (such as open-air cinemas and experiential
+                            film events) and indirect competitors (including multiplex cinemas, immersive museums, and
+                            streaming platforms). The resulting positioning supports a premium and experience-oriented
+                            value proposition, targeted at an audience seeking cultural enrichment, emotional intensity,
+                            and innovative forms of entertainment.</p>
                     </div>
 
                     <a href="Step1_drive.pdf" class="btn" target="_blank"
@@ -499,6 +609,25 @@
     <script src="script.js"></script>
     <script>
         lucide.createIcons();
+
+        // Carousel Logic
+        function initCarousel(carouselId) {
+            const container = document.getElementById(carouselId);
+            const slides = container.querySelectorAll('.carousel-slide');
+            let currentSlide = 0;
+
+            function nextSlide() {
+                slides[currentSlide].classList.remove('active');
+                currentSlide = (currentSlide + 1) % slides.length;
+                slides[currentSlide].classList.add('active');
+            }
+
+            setInterval(nextSlide, 4000); // Change slide every 4 seconds
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            initCarousel('positioningCarousel');
+        });
     </script>
 </body>
 
