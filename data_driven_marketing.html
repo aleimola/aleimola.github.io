@@ -313,6 +313,104 @@
             max-width: 400px;
             margin: 0 auto;
         }
+
+        /* Persona Showcase Styles */
+        .persona-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .persona-card {
+            background: rgba(17, 34, 64, 0.4);
+            border: 1px solid rgba(135, 206, 250, 0.2);
+            padding: 25px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            text-align: left;
+        }
+
+        .persona-card:hover {
+            transform: translateY(-5px);
+            background: rgba(135, 206, 250, 0.05);
+            border-color: #87CEFA;
+            box-shadow: 0 10px 30px rgba(135, 206, 250, 0.1);
+        }
+
+        .persona-image {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #87CEFA;
+            flex-shrink: 0;
+        }
+
+        .persona-info {
+            flex: 1;
+        }
+
+        .persona-card i {
+            color: #87CEFA;
+            width: 20px;
+            height: 20px;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .persona-card h5 {
+            color: #e6f1ff;
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .persona-card p {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            line-height: 1.4;
+            margin-bottom: 0;
+        }
+
+        .persona-tag {
+            font-family: 'Fira Code', monospace;
+            font-size: 0.65rem;
+            color: #87CEFA;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .persona-btn {
+            display: inline-block;
+            padding: 10px 24px;
+            border: 2px solid #87CEFA;
+            border-radius: 50px;
+            color: #87CEFA;
+            font-family: 'Fira Code', monospace;
+            font-size: 0.8rem;
+            font-weight: 600;
+            background: transparent;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            margin-top: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .persona-btn:hover {
+            background: #87CEFA;
+            color: var(--bg-deep);
+            box-shadow: 0 0 20px rgba(135, 206, 250, 0.4);
+            transform: translateY(-2px);
+        }
     </style>
 </head>
 
@@ -673,16 +771,131 @@
 
                 <section id="personas">
                     <h2>Buyer Personas</h2>
-                    <p style="color: var(--text-secondary);">
-                        [Content for Buyer Personas goes here]
+                    <p style="color: var(--text-secondary); margin-bottom: 20px;">
+                        Our research identified four key segments of potential users. Each persona highlights different
+                        motivations and expectations for the Neovision experience.
                     </p>
+
+                    <div class="persona-grid" style="grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));">
+                        <!-- Persona 1: Carlotta -->
+                        <div class="persona-card">
+                            <img src="file:///C:/Users/aless/.gemini/antigravity/brain/b9acd5e0-e8cd-4920-9599-947e965a2983/carlotta_headshot_1768167918234.png"
+                                alt="Carlotta" class="persona-image">
+                            <div class="persona-info">
+                                <h5>Carlotta</h5>
+                                <a href="Buyer%20personas%20(1).pdf#page=1" target="_blank" class="persona-btn">DISCOVER
+                                    ME</a>
+                            </div>
+                        </div>
+                        <!-- Persona 2: Pietro -->
+                        <div class="persona-card">
+                            <img src="file:///C:/Users/aless/.gemini/antigravity/brain/b9acd5e0-e8cd-4920-9599-947e965a2983/pietro_headshot_1768168072532.png"
+                                alt="Pietro" class="persona-image">
+                            <div class="persona-info">
+                                <h5>Pietro</h5>
+                                <a href="Buyer%20personas%20(1).pdf#page=2" target="_blank" class="persona-btn">DISCOVER
+                                    ME</a>
+                            </div>
+                        </div>
+                        <!-- Persona 3: Luca -->
+                        <div class="persona-card">
+                            <img src="file:///C:/Users/aless/.gemini/antigravity/brain/b9acd5e0-e8cd-4920-9599-947e965a2983/luca_headshot_1768168164637.png"
+                                alt="Luca" class="persona-image">
+                            <div class="persona-info">
+                                <h5>Luca</h5>
+                                <a href="Buyer%20personas%20(1).pdf#page=3" target="_blank" class="persona-btn">DISCOVER
+                                    ME</a>
+                            </div>
+                        </div>
+                        <!-- Persona 4: Roberto -->
+                        <div class="persona-card">
+                            <img src="file:///C:/Users/aless/.gemini/antigravity/brain/b9acd5e0-e8cd-4920-9599-947e965a2983/roberto_headshot_1768168274771.png"
+                                alt="Roberto" class="persona-image">
+                            <div class="persona-info">
+                                <h5>Roberto</h5>
+                                <a href="Buyer%20personas%20(1).pdf#page=4" target="_blank" class="persona-btn">DISCOVER
+                                    ME</a>
+                            </div>
+                        </div>
+                        <!-- Persona 5: Carlo -->
+                        <div class="persona-card">
+                            <img src="file:///C:/Users/aless/.gemini/antigravity/brain/b9acd5e0-e8cd-4920-9599-947e965a2983/carlo_headshot_1768168396480.png"
+                                alt="Carlo" class="persona-image">
+                            <div class="persona-info">
+                                <h5>Carlo</h5>
+                                <a href="Buyer%20personas%20(1).pdf#page=5" target="_blank" class="persona-btn">DISCOVER
+                                    ME</a>
+                            </div>
+                        </div>
+                        <!-- Persona 6: Pino -->
+                        <div class="persona-card">
+                            <img src="file:///C:/Users/aless/.gemini/antigravity/brain/b9acd5e0-e8cd-4920-9599-947e965a2983/pino_headshot_1768168515430.png"
+                                alt="Pino" class="persona-image">
+                            <div class="persona-info">
+                                <h5>Pino</h5>
+                                <a href="Buyer%20personas%20(1).pdf#page=6" target="_blank" class="persona-btn">DISCOVER
+                                    ME</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="Buyer%20personas%20(1).pdf" class="btn" target="_blank" style="margin-top: 40px;">OUR
+                        PERSONAS</a>
                 </section>
 
                 <section id="topic-analysis">
                     <h2>Topic Analysis-TALL</h2>
-                    <p style="color: var(--text-secondary);">
-                        [Content for Topic Analysis-TALL goes here]
+                    <p style="color: var(--accent-sky); font-weight: 500; margin-bottom: 15px;">Manual Topic Analysis
                     </p>
+                    <p style="color: var(--text-secondary); margin-bottom: 25px;">
+                        The qualitative topic analysis conducted on interviews and focus groups led to the
+                        identification of six key topics describing users’ perceptions of the Neovision experiential
+                        cinema service:
+                    </p>
+
+                    <a href="Coding_Table_for interviews and focus group.xlsx" class="btn" target="_blank"
+                        style="margin-top: 10px; margin-bottom: 30px;">COODING TABLE</a>
+
+
+                    <div class="analysis-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+                        <!-- Topic 1 -->
+                        <div class="analysis-card">
+                            <h5 style="color: #87CEFA; margin-bottom: 10px;">Attraction and Curiosity</h5>
+                            <p>Users express strong interest and curiosity toward the novelty of immersive cinema,
+                                perceiving the experience as innovative and emotionally engaging compared to traditional
+                                movie-going.</p>
+                        </div>
+                        <!-- Topic 2 -->
+                        <div class="analysis-card">
+                            <h5 style="color: #87CEFA; margin-bottom: 10px;">Immersive and Social Experience</h5>
+                            <p>The smart glass technology enhances immersion, while users simultaneously value the
+                                possibility of sharing the experience with family, friends, and educational groups.</p>
+                        </div>
+                        <!-- Topic 3 -->
+                        <div class="analysis-card">
+                            <h5 style="color: #87CEFA; margin-bottom: 10px;">Comfort, Safety, and Usability</h5>
+                            <p>Concerns emerge regarding prolonged smart glass use, particularly in terms of physical
+                                comfort, potential health effects, and hygiene of shared devices.</p>
+                        </div>
+                        <!-- Topic 4 -->
+                        <div class="analysis-card">
+                            <h5 style="color: #87CEFA; margin-bottom: 10px;">Price and Economic Risk</h5>
+                            <p>Users show high price sensitivity, especially families, questioning whether the
+                                experiential cinema justifies a higher cost than traditional alternatives.</p>
+                        </div>
+                        <!-- Topic 5 -->
+                        <div class="analysis-card">
+                            <h5 style="color: #87CEFA; margin-bottom: 10px;">Trust and Risk Reduction</h5>
+                            <p>Safeguard mechanisms, such as subscription conversion or refund options, increase user
+                                confidence and reduce perceived financial risk.</p>
+                        </div>
+                        <!-- Topic 6 -->
+                        <div class="analysis-card">
+                            <h5 style="color: #87CEFA; margin-bottom: 10px;">Cultural and Educational Value</h5>
+                            <p>Neovision is perceived as offering added cultural and educational value through curated
+                                content, post-screening events, and the use of historical locations.</p>
+                        </div>
+                    </div>
                 </section>
 
             </div>
