@@ -411,6 +411,63 @@
             box-shadow: 0 0 20px rgba(135, 206, 250, 0.4);
             transform: translateY(-2px);
         }
+
+        /* Audio Player Styles */
+        .recordings-container {
+            display: grid;
+            gap: 20px;
+            margin-top: 20px;
+            margin-bottom: 30px;
+        }
+
+        .audio-card {
+            background: rgba(17, 34, 64, 0.4);
+            border: 1px solid rgba(135, 206, 250, 0.2);
+            padding: 20px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .audio-card:hover {
+            background: rgba(135, 206, 250, 0.05);
+            border-color: #87CEFA;
+            transform: translateY(-2px);
+        }
+
+        .audio-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(135, 206, 250, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .audio-icon i {
+            color: #87CEFA;
+            width: 24px;
+            height: 24px;
+        }
+
+        .audio-info {
+            flex-grow: 1;
+        }
+
+        .audio-info h5 {
+            color: #e6f1ff;
+            margin: 0 0 8px 0;
+            font-size: 1rem;
+        }
+
+        .audio-player {
+            width: 100%;
+            height: 36px;
+        }
     </style>
 </head>
 
@@ -812,7 +869,65 @@
                         target="_blank">Magazine</a>
                     <br>
                     <a href="#" class="btn" style="margin-top: 10px;">Trascription</a>
-                    <a href="#" class="btn" style="margin-top: 10px;">Recordings</a>
+
+                    <h4 style="color: var(--accent-sky); margin-top: 30px; margin-bottom: 20px;">Audio Recordings</h4>
+                    <div class="recordings-container">
+                        <!-- Interview Ilaria -->
+                        <div class="audio-card">
+                            <div class="audio-icon">
+                                <i data-lucide="mic"></i>
+                            </div>
+                            <div class="audio-info">
+                                <h5>Interview Ilaria</h5>
+                                <audio controls class="audio-player">
+                                    <source src="../../assets/mp3/INTERVIEW ILARIA.ogg" type="audio/ogg">
+                                    Your browser does not support the audio element.
+                                </audio>
+                            </div>
+                        </div>
+
+                        <!-- Interview Ciamarro Family -->
+                        <div class="audio-card">
+                            <div class="audio-icon">
+                                <i data-lucide="users"></i>
+                            </div>
+                            <div class="audio-info">
+                                <h5>Interview Ciamarro Family</h5>
+                                <audio controls class="audio-player">
+                                    <source src="../../assets/mp3/INTERVIEW CIAMARRO FAMILY.mp3" type="audio/mpeg">
+                                    Your browser does not support the audio element.
+                                </audio>
+                            </div>
+                        </div>
+
+                        <!-- Interview Eugenea -->
+                        <div class="audio-card">
+                            <div class="audio-icon">
+                                <i data-lucide="user"></i>
+                            </div>
+                            <div class="audio-info">
+                                <h5>Interview Eugenea</h5>
+                                <audio controls class="audio-player">
+                                    <source src="../../assets/mp3/INTERVIEW EUGENEA.mp3" type="audio/mpeg">
+                                    Your browser does not support the audio element.
+                                </audio>
+                            </div>
+                        </div>
+
+                        <!-- Focus Group -->
+                        <div class="audio-card">
+                            <div class="audio-icon">
+                                <i data-lucide="users"></i>
+                            </div>
+                            <div class="audio-info">
+                                <h5>FOCUS GROUP</h5>
+                                <audio controls class="audio-player">
+                                    <source src="../../assets/mp3/FOCUS GROUP.mp3" type="audio/mpeg">
+                                    Your browser does not support the audio element.
+                                </audio>
+                            </div>
+                        </div>
+                    </div>
                 </section>
 
                 <section id="survey">
