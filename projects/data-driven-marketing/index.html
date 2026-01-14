@@ -503,7 +503,7 @@
             <h1><span style="color: #87CEFA;">Neo</span><span style="color: var(--accent-blue);">vision</span></h1>
             <p style="color: var(--text-secondary);">Experiential Cinema</p>
             <img src="../../images/logo_marketing.png" alt="Neovision Logo"
-                style="position: absolute; top: 0; right: 0; width: 100px; height: auto;">
+                style="position: absolute; top: 0; right: 0; width: 200px; height: auto;">
         </div>
 
         <div class="dashboard-layout fade-in visible" style="transition-delay: 200ms;">
@@ -517,7 +517,7 @@
                 <a href="#survey" class="menu-item">Survey</a>
                 <a href="#reviews" class="menu-item">Reviews/Comments/Suggestions</a>
                 <a href="#topic-analysis" class="menu-item">Topic Analysis-TALL</a>
-                <a href="#technologies" class="menu-item">Technologies Used</a>
+                <a href="#marketing-operation" class="menu-item">Marketing Operation</a>
             </aside>
 
             <div class="content">
@@ -888,8 +888,7 @@
 
                     <a href="../../assets/pdf/interviste_finale.pdf" class="btn" style="margin-top: 10px;"
                         target="_blank">Magazine</a>
-                    <br>
-                    <a href="#" class="btn" style="margin-top: 10px;">Trascription</a>
+
 
                     <h4 style="color: var(--accent-sky); margin-top: 30px; margin-bottom: 20px;">Audio Recordings</h4>
                     <div class="recordings-container">
@@ -900,10 +899,11 @@
                             </div>
                             <div class="audio-info">
                                 <h5>Interview Ilaria</h5>
-                                <audio controls class="audio-player">
-                                    <source src="../../assets/mp3/INTERVIEW ILARIA.ogg" type="audio/ogg">
-                                    Your browser does not support the audio element.
-                                </audio>
+                                <a href="../../assets/mp3/INTERVIEW_ILARIA.m4a" download class="audio-download-btn"
+                                    style="display: flex; align-items: center; justify-content: center; padding: 12px; background: rgba(135, 206, 250, 0.1); border-radius: 8px; text-decoration: none; color: #87CEFA; font-size: 0.9rem; border: 1px solid rgba(135, 206, 250, 0.3); transition: all 0.3s ease; width: 100%;">
+                                    <i data-lucide="download" style="width: 18px; height: 18px; margin-right: 8px;"></i>
+                                    Download Audio
+                                </a>
                             </div>
                         </div>
 
@@ -914,10 +914,11 @@
                             </div>
                             <div class="audio-info">
                                 <h5>Interview Ciamarro Family</h5>
-                                <audio controls class="audio-player">
-                                    <source src="../../assets/mp3/INTERVIEW CIAMARRO FAMILY.mp3" type="audio/mpeg">
-                                    Your browser does not support the audio element.
-                                </audio>
+                                <a href="../../assets/mp3/INTERVIEW_CIAMARRO.m4a" download class="audio-download-btn"
+                                    style="display: flex; align-items: center; justify-content: center; padding: 12px; background: rgba(135, 206, 250, 0.1); border-radius: 8px; text-decoration: none; color: #87CEFA; font-size: 0.9rem; border: 1px solid rgba(135, 206, 250, 0.3); transition: all 0.3s ease; width: 100%;">
+                                    <i data-lucide="download" style="width: 18px; height: 18px; margin-right: 8px;"></i>
+                                    Download Audio
+                                </a>
                             </div>
                         </div>
 
@@ -928,10 +929,11 @@
                             </div>
                             <div class="audio-info">
                                 <h5>Interview Eugenea</h5>
-                                <audio controls class="audio-player">
-                                    <source src="../../assets/mp3/INTERVIEW EUGENEA.mp3" type="audio/mpeg">
-                                    Your browser does not support the audio element.
-                                </audio>
+                                <a href="../../assets/mp3/INTERVIEW EUGENEA.mp3" download class="audio-download-btn"
+                                    style="display: flex; align-items: center; justify-content: center; padding: 12px; background: rgba(135, 206, 250, 0.1); border-radius: 8px; text-decoration: none; color: #87CEFA; font-size: 0.9rem; border: 1px solid rgba(135, 206, 250, 0.3); transition: all 0.3s ease; width: 100%;">
+                                    <i data-lucide="download" style="width: 18px; height: 18px; margin-right: 8px;"></i>
+                                    Download Audio
+                                </a>
                             </div>
                         </div>
 
@@ -942,10 +944,11 @@
                             </div>
                             <div class="audio-info">
                                 <h5>FOCUS GROUP</h5>
-                                <audio controls class="audio-player">
-                                    <source src="../../assets/mp3/FOCUS GROUP.mp3" type="audio/mpeg">
-                                    Your browser does not support the audio element.
-                                </audio>
+                                <a href="../../assets/mp3/INTERVIEW_FOCUS.m4a" download class="audio-download-btn"
+                                    style="display: flex; align-items: center; justify-content: center; padding: 12px; background: rgba(135, 206, 250, 0.1); border-radius: 8px; text-decoration: none; color: #87CEFA; font-size: 0.9rem; border: 1px solid rgba(135, 206, 250, 0.3); transition: all 0.3s ease; width: 100%;">
+                                    <i data-lucide="download" style="width: 18px; height: 18px; margin-right: 8px;"></i>
+                                    Download Audio
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -987,7 +990,8 @@
                     <p style="color: var(--text-secondary);">
                         [Content for Reviews/Comments/Suggestions goes here]
                     </p>
-                    <a href="#" class="btn" style="margin-top: 10px;">Folder</a>
+                    <a href="../../assets/pdf/recensioni_compressed.pdf" class="btn" style="margin-top: 10px;"
+                        target="_blank">Folder</a>
                 </section>
 
 
@@ -1144,6 +1148,13 @@
                         analysis</a>
                     <a href="documents.html" class="btn" style="margin-top: 10px;">IMPORT</a>
                     <a href="export_data.html" class="btn" style="margin-top: 10px;">EXPORT</a>
+                </section>
+
+                <section id="marketing-operation">
+                    <h2>Marketing Operation</h2>
+                    <p style="color: var(--text-secondary);">
+                        [Content for Marketing Operation goes here]
+                    </p>
                 </section>
 
             </div>
