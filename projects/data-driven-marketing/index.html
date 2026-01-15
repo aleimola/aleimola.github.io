@@ -1205,10 +1205,119 @@
                         </div>
 
                         <div class="subsection" style="margin-bottom: 40px;">
-                            <h3 style="color: #87CEFA; font-size: 1.5rem; margin-bottom: 15px;">RFM-K-Means</h3>
-                            <p style="color: var(--text-secondary);">
-                                [Content for RFM-K-Means analysis goes here]
+                            <h3 style="color: #87CEFA; font-size: 1.5rem; margin-bottom: 20px;">RFM-K-Means</h3>
+                            <p
+                                style="color: var(--accent-sky); font-weight: 500; margin-bottom: 15px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">
+                                Operational Strategies for Clusters (Private Customers)
                             </p>
+                            <p style="color: var(--text-secondary); margin-bottom: 30px;">
+                                From the RFM Analysis combined with K-Means Clustering, it was possible to identify four
+                                customer segments. For each of these segments, we have designed targeted operational
+                                strategies:
+                            </p>
+
+                            <div class="analysis-grid"
+                                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 25px;">
+                                <!-- VIP / Champions -->
+                                <div class="analysis-card"
+                                    style="border-top: 3px solid #FFD700; background: rgba(255, 215, 0, 0.03);">
+                                    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 15px;">
+                                        <i data-lucide="crown" style="color: #FFD700; width: 22px; height: 22px;"></i>
+                                        <h5
+                                            style="color: #FFD700; margin: 0; font-size: 1.1rem; text-transform: uppercase;">
+                                            VIP & Champions</h5>
+                                    </div>
+                                    <p
+                                        style="font-size: 0.9rem; margin-bottom: 15px; font-weight: 600; color: #e6f1ff;">
+                                        Objective: Loyalty & Advocacy</p>
+                                    <ul
+                                        style="font-size: 0.85rem; color: var(--text-secondary); padding-left: 18px; line-height: 1.5;">
+                                        <li style="margin-bottom: 8px;"><strong style="color: #ccd6f6;">“Behind the
+                                                Scenes” Access:</strong> Exclusive invitations to private meetings with
+                                            guests and behind-the-scenes activities.</li>
+                                        <li style="margin-bottom: 8px;"><strong style="color: #ccd6f6;">Elite Seat
+                                                Offering:</strong> Priority access to the most comfortable and desirable
+                                            locations in the venue.</li>
+                                        <li><strong style="color: #ccd6f6;">Referral Program:</strong> "Bring a friend"
+                                            promotions with exclusive discounts on gadgets or aperitifs.</li>
+                                    </ul>
+                                </div>
+
+                                <!-- New Customers -->
+                                <div class="analysis-card"
+                                    style="border-top: 3px solid #00FA9A; background: rgba(0, 250, 154, 0.03);">
+                                    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 15px;">
+                                        <i data-lucide="user-plus"
+                                            style="color: #00FA9A; width: 22px; height: 22px;"></i>
+                                        <h5
+                                            style="color: #00FA9A; margin: 0; font-size: 1.1rem; text-transform: uppercase;">
+                                            New Customers</h5>
+                                    </div>
+                                    <p
+                                        style="font-size: 0.9rem; margin-bottom: 15px; font-weight: 600; color: #e6f1ff;">
+                                        Objective: Conversion to VIP</p>
+                                    <ul
+                                        style="font-size: 0.85rem; color: var(--text-secondary); padding-left: 18px; line-height: 1.5;">
+                                        <li style="margin-bottom: 8px;"><strong style="color: #ccd6f6;">Fast Upgrade
+                                                Strategy:</strong> Email invitation for Life Moment Card with previous
+                                            ticket cost deduction (48h window).</li>
+                                        <li style="margin-bottom: 8px;"><strong style="color: #ccd6f6;">Welcome
+                                                Gift:</strong> Branded gadgets or film-related items to enhance the
+                                            first-time satisfaction.</li>
+                                        <li><strong style="color: #ccd6f6;">Referral Program:</strong> Referral
+                                            discounts
+                                            primarily focused on fostering a shared social experience.</li>
+                                    </ul>
+                                </div>
+
+                                <!-- At-Risk Customers -->
+                                <div class="analysis-card"
+                                    style="border-top: 3px solid #FF6347; background: rgba(255, 99, 71, 0.03);">
+                                    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 15px;">
+                                        <i data-lucide="alert-triangle"
+                                            style="color: #FF6347; width: 22px; height: 22px;"></i>
+                                        <h5
+                                            style="color: #FF6347; margin: 0; font-size: 1.1rem; text-transform: uppercase;">
+                                            At-Risk Customers</h5>
+                                    </div>
+                                    <p
+                                        style="font-size: 0.9rem; margin-bottom: 15px; font-weight: 600; color: #e6f1ff;">
+                                        Objective: Re-engagement & Recovery</p>
+                                    <ul
+                                        style="font-size: 0.85rem; color: var(--text-secondary); padding-left: 18px; line-height: 1.5;">
+                                        <li style="margin-bottom: 8px;"><strong style="color: #ccd6f6;">Suggestion
+                                                form:</strong> Using short email questionnaires to identify precise
+                                            reasons for disengagement.</li>
+                                        <li style="margin-bottom: 8px;"><strong style="color: #ccd6f6;">Social
+                                                Reconnection:</strong> Free invitations to exclusive events to restore
+                                            the emotional brand connection.</li>
+                                        <li><strong style="color: #ccd6f6;">“A Sneak Peek”:</strong> Exclusive
+                                            low-commitment subscriptions designed to reduce pressure during return.</li>
+                                    </ul>
+                                </div>
+
+                                <!-- Hibernating Customers -->
+                                <div class="analysis-card"
+                                    style="border-top: 3px solid #8892b0; background: rgba(136, 146, 176, 0.03);">
+                                    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 15px;">
+                                        <i data-lucide="moon" style="color: #8892b0; width: 22px; height: 22px;"></i>
+                                        <h5
+                                            style="color: #8892b0; margin: 0; font-size: 1.1rem; text-transform: uppercase;">
+                                            Hibernating Customers</h5>
+                                    </div>
+                                    <p
+                                        style="font-size: 0.9rem; margin-bottom: 15px; font-weight: 600; color: #e6f1ff;">
+                                        Objective: Final Reactivation Attempt</p>
+                                    <ul
+                                        style="font-size: 0.85rem; color: var(--text-secondary); padding-left: 18px; line-height: 1.5;">
+                                        <li style="margin-bottom: 8px;"><strong style="color: #ccd6f6;">Targeted
+                                                Reactivation:</strong> Simple emails showcasing the renewed service to
+                                            spark new curiosity.</li>
+                                        <li><strong style="color: #ccd6f6;">Re-permission Email:</strong> Professional
+                                            final contact to offer a choice before discontinuing communication.</li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
 
                         <div class="subsection" style="margin-bottom: 40px;">
